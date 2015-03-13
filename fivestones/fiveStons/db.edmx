@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Log" EntityType="Model.Store.Log" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Players" EntityType="Model.Store.Players" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="event_time" Type="datetime" Nullable="false" />
+          <Property Name="event_desc" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Players">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar(max)" />
+          <Property Name="pas" Type="varchar(max)" />
+          <Property Name="email" Type="varchar(max)" />
+          <Property Name="vin_count" Type="int" />
+          <Property Name="lose_count" Type="int" />
+          <Property Name="logged_on" Type="bit" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="FiveStonesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Players" EntityType="Model.Player" />
+          <EntitySet Name="Log" EntityType="Model.Log" />
+        </EntityContainer>
+        <EntityType Name="Player">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="pas" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="email" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="vin_count" Type="Int32" />
+          <Property Name="lose_count" Type="Int32" />
+          <Property Name="logged_on" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="event_time" Nullable="false" />
+          <Property Type="String" Name="event_desc" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="FiveStonesEntities">
+          <EntitySetMapping Name="Players"><EntityTypeMapping TypeName="Model.Player"><MappingFragment StoreEntitySet="Players">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="pas" ColumnName="pas" />
+            <ScalarProperty Name="email" ColumnName="email" />
+            <ScalarProperty Name="vin_count" ColumnName="vin_count" />
+            <ScalarProperty Name="lose_count" ColumnName="lose_count" />
+            <ScalarProperty Name="logged_on" ColumnName="logged_on" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Log">
+            <EntityTypeMapping TypeName="Model.Log">
+              <MappingFragment StoreEntitySet="Log">
+                <ScalarProperty Name="event_desc" ColumnName="event_desc" />
+                <ScalarProperty Name="event_time" ColumnName="event_time" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="db">
+        <EntityTypeShape EntityType="Model.Player" Width="1.5" PointX="0.75" PointY="0.75" Height="2.3648893229166665" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Log" Width="1.5" PointX="3.375" PointY="0.75" Height="1.5956835937499996" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

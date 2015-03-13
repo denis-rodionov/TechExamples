@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7EFCDC7B-E841-486F-A224-B598CCD15FC6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>University</RootNamespace>
+    <AssemblyName>University</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssignSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignSubject.Designer.cs">
+      <DependentUpon>AssignSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="autoriz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="autoriz.Designer.cs">
+      <DependentUpon>autoriz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cathedras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cathedras.Designer.cs">
+      <DependentUpon>Cathedras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CathModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CathModify.Designer.cs">
+      <DependentUpon>CathModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Converter.cs" />
+    <Compile Include="ExMessage.cs" />
+    <Compile Include="FacModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacModify.Designer.cs">
+      <DependentUpon>FacModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Faculties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Faculties.Designer.cs">
+      <DependentUpon>Faculties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupModify.Designer.cs">
+      <DependentUpon>GroupModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Groups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Groups.Designer.cs">
+      <DependentUpon>Groups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyDataGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Timetable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timetable.Designer.cs">
+      <DependentUpon>Timetable.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssignSubject.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AssignSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="autoriz.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>autoriz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cathedras.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Cathedras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CathModify.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CathModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacModify.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FacModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Faculties.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Faculties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupModify.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GroupModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Groups.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Groups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyDataGrid.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MyDataGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecSubjects.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SpecSubjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartImage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StartImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudModify.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StudModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subjects.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Subjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubModify.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SubModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Teachers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeachModify.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TeachModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Timetable.resx">
+      <DependentUpon>Timetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Query.cs" />
+    <Compile Include="SpecSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecSubjects.Designer.cs">
+      <DependentUpon>SpecSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlAccess.cs" />
+    <Compile Include="StartImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartImage.Designer.cs">
+      <DependentUpon>StartImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students.Designer.cs">
+      <DependentUpon>Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudModify.Designer.cs">
+      <DependentUpon>StudModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subjects.Designer.cs">
+      <DependentUpon>Subjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubModify.Designer.cs">
+      <DependentUpon>SubModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers.Designer.cs">
+      <DependentUpon>Teachers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeachModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeachModify.Designer.cs">
+      <DependentUpon>TeachModify.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="2.0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1.0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="create.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
